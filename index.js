@@ -4,14 +4,15 @@ const cloudinary = require("cloudinary").v2;
 
 const app = express();
 app.use(express.json());
+require("dotenv").config();
 
 // Configuration de Cloudinary
-mongoose.connect("mongodb://localhost:27017/vinted");
+mongoose.connect(process.env.MONGOBD_URI);
 
 cloudinary.config({
-  cloud_name: "dhdhugtxu",
-  api_key: "528547696212156",
-  api_secret: "dshW8dbZWNUV4b6g0YBVkcigqQk",
+  cloud_name: CLOUD_NAME,
+  api_key: PI_KAI,
+  api_secret: API_SECRET,
 });
 
 const userRoutes = require("./routes/user");
@@ -20,10 +21,13 @@ app.use(userRoutes);
 const offreRoutes = require("./routes/offer");
 app.use(offreRoutes);
 
+const cors = require("cors");
+app.use(cors());
+
 app.all("*", (req, res) => {
   res.status(404).json({ message: "Note Found" });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server Started🔥🔥🔥🔥🔥🔥");
 });
