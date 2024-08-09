@@ -7,7 +7,7 @@ app.use(express.json());
 require("dotenv").config();
 
 // Configuration de Cloudinary
-mongoose.connect(process.env.MONGOBD_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
