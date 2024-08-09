@@ -10,9 +10,9 @@ require("dotenv").config();
 mongoose.connect(process.env.MONGOBD_URI);
 
 cloudinary.config({
-  cloud_name: CLOUD_NAME,
-  api_key: PI_KAI,
-  api_secret: API_SECRET,
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KAI,
+  api_secret: process.env.API_SECRET,
 });
 
 const userRoutes = require("./routes/user");
