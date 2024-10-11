@@ -2,7 +2,6 @@ const express = require("express");
 const fileupload = require("express-fileupload");
 const cloudinary = require("cloudinary").v2;
 const Offer = require("../models/Offer");
-const User = require("../models/User");
 
 const router = express.Router();
 

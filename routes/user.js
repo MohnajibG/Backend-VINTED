@@ -19,7 +19,6 @@ router.post("/users/singup", async (req, res) => {
     }
 
     const salt = uid2(64);
-    console.log(salt);
     const hash = SHA256(req.body.password + salt).toString(encBase64);
     const token = uid2(64);
     const newUser = new User({
