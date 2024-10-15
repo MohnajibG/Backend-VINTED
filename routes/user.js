@@ -1,18 +1,22 @@
 const express = require("express");
+
+const router = express.Router();
+
 const uid2 = require("uid2");
 const SHA256 = require("crypto-js/sha256");
 const encBase64 = require("crypto-js/enc-base64");
-const router = express.Router();
 
 const User = require("../models/User");
+const Offer = require("../models/Offer");
 
 router.post("/users/singup", async (req, res) => {
+  const { username, email, password } = req.body;
   try {
     if (!username || !email || !password) {
       return res.status(400).json({ message: "missing parameters" });
     }
 
-    const user = await User.findOne({ email: req.body.email });
+    const user = await User.findOne({ email: email });
     // console.log(user);
     if (user) {
       return res.status(409).json({ message: "email already exists" });
