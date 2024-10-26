@@ -1,28 +1,22 @@
+# Back-end (Node.js, Express)
+
+
 # Progression
 
 **80%**  
 |███████████████████████████████----|
 
+## Authentification des Utilisateurs
+- Mise en place de routes sécurisées pour l'inscription et la connexion des utilisateurs, incluant le hachage des mots de passe et la gestion des sessions pour garantir la sécurité.
 
+## Données des Articles
+- Routes pour récupérer les informations sur les articles disponibles, ainsi que les détails associés (description, prix, etc.).
 
-# Back-end (Node.js, Express)
+## Paiement en Ligne
+- Intégration du système de paiement sécurisé Stripe pour gérer les transactions en ligne et assurer la sécurité des paiements.
 
-## Authentification des utilisateurs
-- Routes sécurisées pour l'inscription et la connexion des utilisateurs.
-- Hachage des mots de passe avant le stockage dans la base de données.
-- Gestion des tokens JWT pour authentifier les utilisateurs et sécuriser les routes protégées.
+## Base de Données
+- Utilisation de MongoDB pour stocker les informations des utilisateurs, assurant une gestion fiable et performante des données.
 
-## Données des articles
-- Routes pour récupérer les informations sur les articles disponibles dans la base de données.
-- Routes pour afficher les détails spécifiques de chaque article (description, prix, etc.).
-
-## Base de données
-- Utilisation de MongoDB pour stocker les informations des utilisateurs et des articles.
-- Utilisation de Mongoose pour modéliser les schémas de données et faciliter les opérations CRUD (Create, Read, Update, Delete).
-
-## Paiement en ligne (en cours)
-- Intégration du système de paiement Stripe.
-- Mise en place de routes pour gérer les transactions de paiement.
-- Gestion sécurisée des paiements via les tokens Stripe.
 
 
