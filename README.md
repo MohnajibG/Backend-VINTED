@@ -12,7 +12,7 @@
 ## Données des Articles
 - Routes pour récupérer les informations sur les articles disponibles, ainsi que les détails associés (description, prix, etc.).
 
-## Paiement en Ligne
+## Paiement en Ligne (en cours)
 - Intégration du système de paiement sécurisé Stripe pour gérer les transactions en ligne et assurer la sécurité des paiements.
 
 ## Base de Données
